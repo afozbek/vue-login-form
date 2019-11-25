@@ -1,0 +1,54 @@
+.m-formContainer {
+  width: 40%;
+}
+
+.m-loginForm {
+  width: 80%;
+  margin: 0 auto;
+  @include flex(column wrap, center, center);
+
+  &::placeholder {
+    color: #96969ce8;
+  }
+
+  &__desc {
+    margin-bottom: $xxl;
+    color: #4a4abde8;
+  }
+
+  &__input {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #3a67a0;
+    outline: #4a4abde8;
+    font-size: 15px;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: $md;
+
+    &:focus {
+      border-color: #4a4abde8;
+    }
+  }
+
+  &__forgotBtn {
+    align-self: flex-end;
+
+    font-size: 15px;
+    color: #808080;
+    text-decoration: none;
+    margin-bottom: $md;
+  }
+
+  &__submitBtn {
+    border: 1px solid;
+    border-radius: 10px;
+    background: #4a4abde8;
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
