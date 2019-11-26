@@ -1,3 +1,3 @@
 # login-form
 
-![screenshot](assets/img/proje.png)
+![screenshot](assets/img/proje.gif)
