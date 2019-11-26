@@ -7,6 +7,8 @@
         <input class="m-loginForm__input" v-model="email" placeholder=" " name="email" type="text" />
 
         <div class="m-loginForm__placeholder">Email</div>
+
+        <span class="m-loginForm__pcAnimation"></span>
       </div>
     </div>
 
@@ -21,6 +23,7 @@
         />
 
         <div class="m-loginForm__placeholder">Password</div>
+        <span class="m-loginForm__pcAnimation"></span>
       </div>
     </div>
 
