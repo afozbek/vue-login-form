@@ -1,17 +1,23 @@
+$form-back-color: $wild-sand;
 $form-main-color: $blue-violet;
 $form-placeholder-color: $manatee;
 $form-input-border-color: $silver;
 $form-forgot-button-color: $gray;
 
 .m-formContainer {
-  width: 40%;
+  flex: 1;
+  min-height: 100vh;
+
+  padding: 173px 55px 55px;
+
+  background-color: $form-back-color;
+
+  @media screen and (max-width: 450px) {
+    padding: 173px 20px 55px;
+  }
 }
 
 .m-loginForm {
-  width: 80%;
-
-  margin: 0 auto;
-
   @include flex(column wrap, center, center);
 
   &::placeholder {
@@ -64,7 +70,7 @@ $form-forgot-button-color: $gray;
     }
 
     &:checked + .m-loginForm__confirmLabel::after {
-      content: "\2714";
+      content: "\2713";
 
       position: absolute;
       top: 3px;
@@ -89,6 +95,8 @@ $form-forgot-button-color: $gray;
 
     color: $form-forgot-button-color;
 
+    line-height: 1;
+
     cursor: pointer;
 
     user-select: none;
@@ -104,6 +112,8 @@ $form-forgot-button-color: $gray;
 
       margin-right: $xs;
       border: 1px solid $form-input-border-color;
+
+      background: $white;
 
       border-color: $form-input-border-color;
       vertical-align: middle;
@@ -166,6 +176,12 @@ $form-forgot-button-color: $gray;
 
     font-size: $fs-15;
     text-decoration: none;
+
+    @include transition-ease;
+
+    &:hover {
+      color: $form-main-color;
+    }
   }
 
   &__submitBtn {
@@ -177,7 +193,8 @@ $form-forgot-button-color: $gray;
     background: $form-main-color;
     color: $white;
 
-    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    font-size: $fs-14;
 
     cursor: pointer;
 

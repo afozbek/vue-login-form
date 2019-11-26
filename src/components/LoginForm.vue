@@ -35,10 +35,10 @@
             id="remember"
           />
 
-          <label class="m-loginForm__confirmLabel" for="remember">Remember Me?</label>
+          <label class="m-loginForm__confirmLabel" for="remember">Remember Me</label>
         </div>
 
-        <a class="m-loginForm__forgotBtn" href="#">Forgot Password?</a>
+        <a class="m-loginForm__forgotBtn" href="#">Forgot Password</a>
       </div>
     </div>
 
