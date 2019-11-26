@@ -24,23 +24,55 @@ $form-forgot-button-color: $gray;
     color: $form-main-color;
   }
 
+  &__inputGroup {
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: $md;
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: 15px;
+    left: $md;
+
+    color: $form-placeholder-color;
+
+    transition: all .3s;
+    pointer-events: none;
+    user-select: none;
+    transform: scale(.7) translateY(-20px);
+    transform-origin: 0 0;
+  }
+
   &__input {
     display: inline-block;
     width: 100%;
 
     padding: $md;
-    margin-bottom: $md;
     border: 1px solid $form-input-border-color;
 
     color: $form-main-color;
 
     font-size: $fs-15;
 
+    cursor: pointer;
+
+    transition: all .4s;
     border-radius: 3px;
     outline: $form-main-color;
 
     &:focus {
       border-color: $form-main-color;
+    }
+
+    &:placeholder-shown + .m-loginForm__placeholder {
+      transform: none;
+    }
+
+    &:focus + .m-loginForm__placeholder {
+      transform: scale(.7) translateY(-20px);
     }
   }
 
