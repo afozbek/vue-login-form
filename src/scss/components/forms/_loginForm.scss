@@ -42,7 +42,7 @@ $form-forgot-button-color: $gray;
     transition: all .3s;
     pointer-events: none;
     user-select: none;
-    transform: scale(.7) translateY(-20px);
+    transform: scale(.7) translateY(-18px);
     transform-origin: 0 0;
   }
 
@@ -71,9 +71,9 @@ $form-forgot-button-color: $gray;
       transform: none;
     }
 
-    &:focus + .m-loginForm__placeholder {
-      transform: scale(.7) translateY(-20px);
-    }
+    // &:focus + .m-loginForm__placeholder {
+    //   transform: scale(.7) translateY(-20px);
+    // }
   }
 
   &__forgotBtn {
