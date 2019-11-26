@@ -24,12 +24,91 @@ $form-forgot-button-color: $gray;
     color: $form-main-color;
   }
 
-  &__inputGroup {
-    position: relative;
-
+  &__group {
     width: 100%;
 
     margin-bottom: $md;
+
+    &.-mg-lg {
+      margin-bottom: $xxl;
+    }
+  }
+
+  &__rememberWrapper {
+    @include flex(row wrap, space-between, center);
+  }
+
+  &__inputGroup {
+    position: relative;
+  }
+
+  &__checkboxWrapper {
+    margin: 0;
+
+    @include flex(row wrap, space-between, center);
+  }
+
+  &__confirm {
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+    // -webkit-appearance: none;
+    //    -moz-appearance: none;
+    //         appearance: none;
+
+    pointer-events: none;
+
+    &:checked + .m-loginForm__confirmCheck {
+      border-color: $form-main-color;
+    }
+
+    &:checked + .m-loginForm__confirmLabel::after {
+      content: "\2714";
+
+      position: absolute;
+      top: 3px;
+      left: 5px;
+
+      color: $form-main-color;
+
+      font-size: 14px;
+    }
+
+    &:checked + .m-loginForm__confirmLabel::before {
+      border-color: $form-main-color;
+    }
+
+    &:focus + .m-loginForm__confirmLabel::before {
+      border-color: $form-main-color;
+    }
+  }
+
+  &__confirmLabel {
+    position: relative;
+
+    color: $form-forgot-button-color;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    &::before {
+      content: "";
+
+      position: relative;
+
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+
+      margin-right: $xs;
+      border: 1px solid $form-input-border-color;
+
+      border-color: $form-input-border-color;
+      vertical-align: middle;
+      border-radius: 3px;
+    }
   }
 
   &__placeholder {
@@ -79,9 +158,9 @@ $form-forgot-button-color: $gray;
   }
 
   &__forgotBtn {
-    align-self: flex-end;
+    display: inline-block;
 
-    margin-bottom: $xxl;
+    margin-left: auto;
 
     color: $form-forgot-button-color;
 
