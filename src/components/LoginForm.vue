@@ -1,6 +1,6 @@
 <template>
   <form class="m-loginForm">
-    <h1 class="m-loginForm__desc">Login to Continue</h1>
+    <h1 class="m-loginForm__desc">{{header}}</h1>
 
     <input class="m-loginForm__input" placeholder="Email" name="email" type="text" />
 
@@ -8,10 +8,12 @@
 
     <a class="m-loginForm__forgotBtn" href="#">Forgot Password?</a>
 
-    <button class="m-loginForm__submitBtn">Login</button>
+    <button type="submit" class="m-loginForm__submitBtn">Login</button>
   </form>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["header"]
+};
 </script>

@@ -7,7 +7,7 @@
         src="https://colorlib.com/etc/lf/Login_v18/images/bg-01.jpg"
       />
       <div class="m-formContainer">
-        <LoginForm />
+        <LoginForm :header="headerText" />
       </div>
     </div>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
@@ -19,6 +19,11 @@ import LoginForm from "./components/LoginForm.vue";
 
 export default {
   name: "app",
+  data() {
+    return {
+      headerText: "Login to Continue"
+    };
+  },
   components: {
     LoginForm
   }

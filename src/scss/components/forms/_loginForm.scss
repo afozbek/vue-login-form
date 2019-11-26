@@ -1,54 +1,82 @@
+$form-main-color: $blue-violet;
+$form-placeholder-color: $manatee;
+$form-input-border-color: $silver;
+$form-forgot-button-color: $gray;
+
 .m-formContainer {
   width: 40%;
 }
 
 .m-loginForm {
   width: 80%;
+
   margin: 0 auto;
+
   @include flex(column wrap, center, center);
 
   &::placeholder {
-    color: #96969ce8;
+    color: $form-placeholder-color;
   }
 
   &__desc {
     margin-bottom: $xxl;
-    color: #4a4abde8;
+
+    color: $form-main-color;
   }
 
   &__input {
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    color: #3a67a0;
-    outline: #4a4abde8;
-    font-size: 15px;
-    padding: 15px;
     width: 100%;
+
+    padding: $md;
     margin-bottom: $md;
+    border: 1px solid $form-input-border-color;
+
+    color: $form-main-color;
+
+    font-size: $fs-15;
+
+    border-radius: 3px;
+    outline: $form-main-color;
 
     &:focus {
-      border-color: #4a4abde8;
+      border-color: $form-main-color;
     }
   }
 
   &__forgotBtn {
     align-self: flex-end;
 
-    font-size: 15px;
-    color: #808080;
+    margin-bottom: $xxl;
+
+    color: $form-forgot-button-color;
+
+    font-size: $fs-15;
     text-decoration: none;
-    margin-bottom: $md;
   }
 
   &__submitBtn {
-    border: 1px solid;
-    border-radius: 10px;
-    background: #4a4abde8;
-    color: #fff;
-    height: 50px;
     width: 100%;
+    height: 50px;
+
+    border: 1px solid;
+
+    background: $form-main-color;
+    color: $white;
+
     font-size: 14px;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+    border-color: $form-main-color;
     text-transform: uppercase;
+    transition: transform .5s;
+    outline: none;
+
+    &:active,
+    &:focus {
+      transform: translateY(3px);
+    }
   }
 }
