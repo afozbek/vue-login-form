@@ -14,6 +14,7 @@
         type="password"
         name="password"
       />
+
       <div class="m-loginForm__placeholder">Password</div>
     </div>
 
