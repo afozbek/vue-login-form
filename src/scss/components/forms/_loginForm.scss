@@ -34,7 +34,7 @@ $form-forgot-button-color: $gray;
 
   &__placeholder {
     position: absolute;
-    top: 15px;
+    top: 19px;
     left: $md;
 
     color: $form-placeholder-color;
@@ -42,8 +42,8 @@ $form-forgot-button-color: $gray;
     transition: all .3s;
     pointer-events: none;
     user-select: none;
-    transform: scale(.7) translateY(-18px);
     transform-origin: 0 0;
+    transform: scale(.7) translateY(-15px);
   }
 
   &__input {
@@ -51,6 +51,7 @@ $form-forgot-button-color: $gray;
     width: 100%;
 
     padding: $md;
+    padding-top: $xl;
     border: 1px solid $form-input-border-color;
 
     color: $form-main-color;
@@ -60,8 +61,9 @@ $form-forgot-button-color: $gray;
     cursor: pointer;
 
     transition: all .4s;
-    border-radius: 3px;
+    border-radius: 10px;
     outline: $form-main-color;
+    transform: none;
 
     &:focus {
       border-color: $form-main-color;
@@ -71,9 +73,9 @@ $form-forgot-button-color: $gray;
       transform: none;
     }
 
-    // &:focus + .m-loginForm__placeholder {
-    //   transform: scale(.7) translateY(-20px);
-    // }
+    &:focus + .m-loginForm__placeholder {
+      transform: scale(.7) translateY(-15px);
+    }
   }
 
   &__forgotBtn {
