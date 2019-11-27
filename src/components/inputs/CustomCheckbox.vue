@@ -1,8 +1,19 @@
 <template>
   <div class="m-loginForm__checkboxWrapper">
-    <input class="m-loginForm__confirm" type="checkbox" :name="name" :id="id" />
+    <input
+      class="m-loginForm__confirm"
+      type="checkbox"
+      :checked="checked"
+      :name="name"
+      :id="id"
+    />
 
-    <label class="m-loginForm__confirmLabel" :data-content="checkbox" :for="id">{{labelText}}</label>
+    <label
+      class="m-loginForm__confirmLabel"
+      :data-content="checkbox"
+      :for="id"
+      >{{ labelText }}</label
+    >
   </div>
 </template>
 
@@ -26,6 +37,11 @@ export default {
       required: false
       // \2713
       // \f00c
+    },
+    checked: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   }
 };

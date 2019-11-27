@@ -244,3 +244,11 @@ $form-forgot-button-color: $gray;
     }
   }
 }
+
+.a-showCase {
+  width: 100%;
+
+  margin-bottom: $xxl;
+
+  @include flex(row wrap, space-between, center);
+}
