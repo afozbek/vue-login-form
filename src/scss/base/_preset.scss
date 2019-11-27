@@ -14,7 +14,12 @@
 }
 
 // @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@font-face {
+  font-family: "avenir";
 
-// html {
-//   font-family: "Open Sans", sans-serif;
-// }
+  src: url(https://statics.boyner.com.tr/assets/fonts/avenir/AvenirLTStd-Roman.woff2);
+}
+
+html {
+  font-family: "avenir", sans-serif;
+}
