@@ -176,7 +176,11 @@ $form-forgot-button-color: $gray;
     transform: none;
 
     &:focus {
-      // border-color: $form-main-color;
+      border-color: $form-main-color;
+      // border: none;
+    }
+
+    &.-animate:focus {
       border: none;
     }
 

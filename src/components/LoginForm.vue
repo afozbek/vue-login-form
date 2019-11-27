@@ -3,28 +3,11 @@
     <h1 class="m-loginForm__desc">{{ header }}</h1>
 
     <div class="m-loginForm__group">
-      <div class="m-loginForm__inputGroup">
-        <input class="m-loginForm__input" v-model="email" placeholder=" " name="email" type="text" />
-
-        <div class="m-loginForm__placeholder">Email</div>
-
-        <span class="m-loginForm__pcAnimation"></span>
-      </div>
+      <animated-input placeholder="Email" :showAnimation="true"></animated-input>
     </div>
 
     <div class="m-loginForm__group">
-      <div class="m-loginForm__inputGroup">
-        <input
-          class="m-loginForm__input"
-          v-model="password"
-          placeholder=" "
-          type="password"
-          name="password"
-        />
-
-        <div class="m-loginForm__placeholder">Password</div>
-        <span class="m-loginForm__pcAnimation"></span>
-      </div>
+      <animated-input placeholder="Password" :showAnimation="false"></animated-input>
     </div>
 
     <div class="m-loginForm__group -mg-lg">
@@ -50,6 +33,8 @@
 </template>
 
 <script>
+import AnimatedInput from "./inputs/AnimatedInput.vue";
+
 export default {
   data() {
     return {
@@ -57,6 +42,9 @@ export default {
       password: "",
       rememberMe: false
     };
+  },
+  components: {
+    animatedInput: AnimatedInput
   },
   props: ["header"],
   methods: {}
