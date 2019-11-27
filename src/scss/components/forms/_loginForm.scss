@@ -3,6 +3,7 @@ $form-main-color: $blue-violet;
 $form-placeholder-color: $manatee;
 $form-input-border-color: $silver;
 $form-forgot-button-color: $gray;
+$translateY: -20px;
 
 .m-formContainer {
   flex: 1;
@@ -52,6 +53,7 @@ $form-forgot-button-color: $gray;
     margin: 0;
 
     @include flex(row wrap, space-between, center);
+    user-select: none;
   }
 
   &__confirm {
@@ -97,6 +99,7 @@ $form-forgot-button-color: $gray;
 
     color: $form-forgot-button-color;
 
+    font-family: "avenir";
     line-height: 1;
 
     cursor: pointer;
@@ -125,7 +128,7 @@ $form-forgot-button-color: $gray;
 
   &__placeholder {
     position: absolute;
-    top: 19px;
+    top: 22px;
     left: $md;
 
     color: $form-placeholder-color;
@@ -134,7 +137,7 @@ $form-forgot-button-color: $gray;
     pointer-events: none;
     user-select: none;
     transform-origin: 0 0;
-    transform: scale(.7) translateY(-15px);
+    transform: scale(.7) translateY($translateY);
   }
 
   &__pcAnimation {
@@ -197,7 +200,7 @@ $form-forgot-button-color: $gray;
     }
 
     &:focus + .m-loginForm__placeholder {
-      transform: scale(.7) translateY(-15px);
+      transform: scale(.7) translateY($translateY);
     }
   }
 
