@@ -3,32 +3,18 @@
     <h1 class="m-loginForm__desc">{{ header }}</h1>
 
     <div class="m-loginForm__group">
-      <div class="m-loginForm__inputGroup">
-        <input class="m-loginForm__input" v-model="email" placeholder=" " name="email" type="text" />
-
-        <div class="m-loginForm__placeholder">Email</div>
-      </div>
+      <animated-input placeholder="Email" :showAnimation="true"></animated-input>
     </div>
 
     <div class="m-loginForm__group">
-      <div class="m-loginForm__inputGroup">
-        <input
-          class="m-loginForm__input"
-          v-model="password"
-          placeholder=" "
-          type="password"
-          name="password"
-        />
-
-        <div class="m-loginForm__placeholder">Password</div>
-      </div>
+      <animated-input placeholder="Password" :showAnimation="false"></animated-input>
     </div>
 
     <div class="m-loginForm__group -mg-lg">
       <div class="m-loginForm__rememberWrapper">
         <custom-checkbox name="remember_me" id="remember_me" labelText="Furkan" checkbox="✔︎"></custom-checkbox>
 
-        <a class="m-loginForm__forgotBtn" href="#">Forgot Password?</a>
+        <a class="m-loginForm__forgotBtn" href="#">Forgot Password</a>
       </div>
     </div>
 
