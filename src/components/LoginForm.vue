@@ -12,7 +12,7 @@
 
     <div class="m-loginForm__group -mg-lg">
       <div class="m-loginForm__rememberWrapper">
-        <custom-checkbox name="remember_me" id="remember_me" labelText="Furkan" checkbox="✔︎"></custom-checkbox>
+        <custom-checkbox name="remember_me" id="remember_me" labelText="Remember Me" checkbox="✔︎"></custom-checkbox>
 
         <a class="m-loginForm__forgotBtn" href="#">Forgot Password</a>
       </div>
