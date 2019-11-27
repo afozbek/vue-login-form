@@ -12,17 +12,7 @@
 
     <div class="m-loginForm__group -mg-lg">
       <div class="m-loginForm__rememberWrapper">
-        <div class="m-loginForm__checkboxWrapper">
-          <input
-            class="m-loginForm__confirm"
-            v-model="rememberMe"
-            type="checkbox"
-            name="remember"
-            id="remember"
-          />
-
-          <label class="m-loginForm__confirmLabel" for="remember">Remember Me</label>
-        </div>
+        <custom-checkbox name="remember_me" id="remember_me" labelText="Furkan" checkbox="✔︎"></custom-checkbox>
 
         <a class="m-loginForm__forgotBtn" href="#">Forgot Password</a>
       </div>
@@ -34,6 +24,7 @@
 
 <script>
 import AnimatedInput from "./inputs/AnimatedInput.vue";
+import CustomCheckbox from "./inputs/CustomCheckbox.vue";
 
 export default {
   data() {
@@ -44,9 +35,9 @@ export default {
     };
   },
   components: {
-    animatedInput: AnimatedInput
+    animatedInput: AnimatedInput,
+    customCheckbox: CustomCheckbox
   },
-  props: ["header"],
-  methods: {}
+  props: ["header"]
 };
 </script>

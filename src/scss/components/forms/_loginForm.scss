@@ -70,7 +70,7 @@ $form-forgot-button-color: $gray;
     }
 
     &:checked + .m-loginForm__confirmLabel::after {
-      content: "\2713";
+      content: attr(data-content);
 
       position: absolute;
       top: 3px;
@@ -82,13 +82,14 @@ $form-forgot-button-color: $gray;
       font-size: 14px;
     }
 
-    &:checked + .m-loginForm__confirmLabel::before {
-      border-color: $form-main-color;
-    }
-
+    &:checked,
     &:focus + .m-loginForm__confirmLabel::before {
       border-color: $form-main-color;
     }
+
+    //  + .m-loginForm__confirmLabel::before {
+    //   border-color: $form-main-color;
+    // }
   }
 
   &__confirmLabel {
