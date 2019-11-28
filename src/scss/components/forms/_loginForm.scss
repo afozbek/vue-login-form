@@ -185,7 +185,7 @@ $translateY: -20px;
     }
 
     &.-animate:focus {
-      border: none;
+      border-color: transparent;
     }
 
     &:focus ~ .m-loginForm__pcAnimation {

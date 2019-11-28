@@ -2,15 +2,15 @@
   <div class="m-loginForm__inputGroup">
     <input
       class="m-loginForm__input"
-      :class="{'-animate': showAnimation}"
+      :class="{ '-animate': animateBorder }"
       placeholder=" "
       name="email"
       type="text"
     />
 
-    <div class="m-loginForm__placeholder">{{placeholder}}</div>
+    <div class="m-loginForm__placeholder">{{ placeholder }}</div>
 
-    <span class="m-loginForm__pcAnimation" v-if="showAnimation"></span>
+    <span class="m-loginForm__pcAnimation" v-if="animateBorder"></span>
   </div>
 </template>
 
@@ -21,9 +21,10 @@ export default {
       type: String,
       required: true
     },
-    showAnimation: {
+    animateBorder: {
       type: Boolean,
-      required: true
+      required: false,
+      default: false
     }
   }
 };
