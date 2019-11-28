@@ -1,5 +1,5 @@
 <template>
-  <a class="m-loginForm__forgotBtn">
+  <a class="a-linkButton">
     <!-- We can add fonts, texts etc -->
     <slot></slot>
   </a>
@@ -16,4 +16,7 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import "@/scss/components/buttons/_linkButton.scss";
+
+</style>

@@ -1,0 +1,22 @@
+@import "../../helpers/variables/initialize";
+@import "../../helpers/mixins/initialize";
+// VARIABLES
+$button-color: $gray;
+$button-hover-color: $blue-violet;
+
+.a-linkButton {
+  display: inline-block;
+
+  margin-left: auto;
+
+  color: $button-color;
+
+  font-size: $fs-15;
+  text-decoration: none;
+
+  @include transition-ease;
+
+  &:hover {
+    color: $button-hover-color;
+  }
+}

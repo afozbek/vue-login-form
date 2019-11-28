@@ -1,0 +1,73 @@
+@import "../../helpers/variables/initialize";
+@import "../../helpers/mixins/initialize";
+// VARIABLES
+$custom-check-main-color: $blue-violet;
+$custom-check-border-color: $silver;
+$custom-check-label-color: $gray;
+$translateY: -20px;
+
+.a-customCheckbox {
+  margin: 0;
+
+  @include flex(row wrap, space-between, center);
+  user-select: none;
+
+  &__confirm {
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    &:checked + .a-customCheckbox__confirmLabel::after {
+      content: attr(data-content);
+
+      position: absolute;
+      top: 3px;
+      left: 5px;
+
+      color: $custom-check-main-color;
+
+      font-family: monospace;
+      font-size: 14px;
+    }
+
+    &:checked,
+    &:focus + .a-customCheckbox__confirmLabel::before {
+      border-color: $custom-check-main-color;
+    }
+  }
+
+  &__confirmLabel {
+    position: relative;
+
+    color: $custom-check-label-color;
+
+    font-family: "avenir";
+    line-height: 1;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    &::before {
+      content: "";
+
+      position: relative;
+
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+
+      margin-right: $xs;
+      border: 1px solid $custom-check-border-color;
+
+      background: $white;
+
+      border-color: $custom-check-border-color;
+      vertical-align: middle;
+      border-radius: 3px;
+    }
+  }
+}
