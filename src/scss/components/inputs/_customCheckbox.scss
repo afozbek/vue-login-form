@@ -50,6 +50,7 @@ $translateY: -20px;
     cursor: pointer;
 
     user-select: none;
+    @include flex(row wrap, center, center);
 
     &::before {
       content: "";
@@ -69,5 +70,11 @@ $translateY: -20px;
       vertical-align: middle;
       border-radius: 3px;
     }
+  }
+
+  &__labelText {
+    display: inline-block;
+
+    padding-top: 3px;
   }
 }
