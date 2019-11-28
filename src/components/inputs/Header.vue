@@ -5,8 +5,10 @@
 <script>
 export default {
   props: {
-    title: String,
-    required: true
+    title: {
+      type: String,
+      required: true
+    }
   }
 };
 </script>
