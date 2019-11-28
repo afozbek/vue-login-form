@@ -1,19 +1,13 @@
 <template>
   <form class="m-loginForm">
-    <h1 class="m-loginForm__desc">{{ header }}</h1>
+    <Header :title="title" />
 
     <div class="m-loginForm__group">
-      <animated-input
-        placeholder="Email"
-        :showAnimation="true"
-      ></animated-input>
+      <animated-input placeholder="Email" animateBorder />
     </div>
 
     <div class="m-loginForm__group">
-      <animated-input
-        placeholder="Password"
-        :showAnimation="false"
-      ></animated-input>
+      <animated-input placeholder="Password" animateBorder />
     </div>
 
     <div class="m-loginForm__group -mg-lg">
@@ -21,15 +15,17 @@
         <custom-checkbox
           name="remember_me"
           id="remember_me"
-          labelText="Remember Me"
+          labelText="Remember Me 😉"
           checkbox="✔︎"
         ></custom-checkbox>
 
-        <a class="m-loginForm__forgotBtn" href="#">Forgot Password</a>
+        <link-button href="#" linkText="Forgot Password">
+          I forgot password 🤦🏻‍♂️
+        </link-button>
       </div>
     </div>
 
-    <div class="a-showCase">
+    <!-- <div class="a-showCase">
       <custom-checkbox
         name="remember_me1"
         id="remember_me1"
@@ -53,15 +49,18 @@
         checkbox="✔︎"
         :checked="true"
       ></custom-checkbox>
-    </div>
+    </div> -->
 
-    <button type="submit" class="m-loginForm__submitBtn">Login</button>
+    <submit-button>Login</submit-button>
   </form>
 </template>
 
 <script>
+import Header from "./inputs/Header.vue";
 import AnimatedInput from "./inputs/AnimatedInput.vue";
 import CustomCheckbox from "./inputs/CustomCheckbox.vue";
+import LinkButton from "./buttons/LinkButton.vue";
+import SubmitButton from "./buttons/SubmitButton.vue";
 
 export default {
   data() {
@@ -72,9 +71,14 @@ export default {
     };
   },
   components: {
-    animatedInput: AnimatedInput,
-    customCheckbox: CustomCheckbox
+    Header,
+    AnimatedInput,
+    CustomCheckbox,
+    LinkButton,
+    SubmitButton
   },
-  props: ["header"]
+  props: {
+    title: String
+  }
 };
 </script>

@@ -4,7 +4,7 @@
       <div class="a-heroImage"></div>
 
       <div class="m-formContainer">
-        <LoginForm :header="headerText" />
+        <LoginForm :title="headerText" />
       </div>
     </div>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
