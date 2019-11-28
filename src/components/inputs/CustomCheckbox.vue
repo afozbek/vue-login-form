@@ -12,8 +12,11 @@
       class="a-customCheckbox__confirmLabel"
       :data-content="checkbox"
       :for="id"
-      >{{ labelText }}</label
     >
+      <span class="a-customCheckbox__labelText">
+        {{ labelText }}
+      </span>
+    </label>
   </div>
 </template>
 
