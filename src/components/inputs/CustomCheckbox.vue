@@ -1,7 +1,7 @@
 <template>
-  <div class="m-loginForm__checkboxWrapper">
+  <div class="a-customCheckbox">
     <input
-      class="m-loginForm__confirm"
+      class="a-customCheckbox__confirm"
       type="checkbox"
       :checked="checked"
       :name="name"
@@ -9,7 +9,7 @@
     />
 
     <label
-      class="m-loginForm__confirmLabel"
+      class="a-customCheckbox__confirmLabel"
       :data-content="checkbox"
       :for="id"
       >{{ labelText }}</label
@@ -46,3 +46,8 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+@import "@/scss/components/inputs/_customCheckbox.scss";
+
+</style>

@@ -82,3 +82,8 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+@import "@/scss/components/forms/_loginForm.scss";
+
+</style>

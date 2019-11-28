@@ -1,16 +1,16 @@
 <template>
-  <div class="m-loginForm__inputGroup">
+  <div class="a-textInput">
     <input
-      class="m-loginForm__input"
+      class="a-textInput__element"
       :class="{ '-animate': animateBorder }"
       placeholder=" "
       name="email"
       type="text"
     />
 
-    <div class="m-loginForm__placeholder">{{ placeholder }}</div>
+    <div class="a-textInput__placeholder">{{ placeholder }}</div>
 
-    <span class="m-loginForm__pcAnimation" v-if="animateBorder"></span>
+    <span class="a-textInput__pcAnimation" v-if="animateBorder"></span>
   </div>
 </template>
 
@@ -29,3 +29,8 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+@import "@/scss/components/inputs/_animatedInput.scss";
+
+</style>

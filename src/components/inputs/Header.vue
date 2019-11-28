@@ -1,5 +1,7 @@
 <template>
-  <h1 class="m-loginForm__desc">{{ title }}</h1>
+  <h1 class="a-header">
+    {{ title }}
+  </h1>
 </template>
 
 <script>
@@ -12,3 +14,8 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+@import "@/scss/components/inputs/_header.scss";
+
+</style>
