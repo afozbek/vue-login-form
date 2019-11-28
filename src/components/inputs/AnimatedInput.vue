@@ -5,7 +5,7 @@
       :class="{ '-animate': animateBorder }"
       placeholder=" "
       name="email"
-      type="text"
+      :type="inputType"
     />
 
     <div class="a-textInput__placeholder">{{ placeholder }}</div>
@@ -17,6 +17,11 @@
 <script>
 export default {
   props: {
+    inputType: {
+      type: String,
+      required: false,
+      default: "text"
+    },
     placeholder: {
       type: String,
       required: true
