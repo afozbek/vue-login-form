@@ -7,7 +7,11 @@
     </div>
 
     <div class="m-loginForm__group">
-      <animated-input placeholder="Password" animateBorder />
+      <animated-input
+        placeholder="Password"
+        animateBorder
+        inputType="password"
+      />
     </div>
 
     <div class="m-loginForm__group -mg-lg">
